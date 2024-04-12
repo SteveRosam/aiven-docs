@@ -19,7 +19,7 @@ machines behind the scenes. You don't need to remember using
 :::important
 There are limits on the number of queries that you can run concurrently in Aiven for
 ClickHouse. Depending on your service plan, ``max_concurrent_queries`` ranges from ``25``
-to ``300``. See
+to ``400``. See
 [Aiven for ClickHouse® limits and limitations](/docs/products/clickhouse/reference/limitations)
 for details.
 :::

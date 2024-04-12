@@ -162,12 +162,12 @@ on how to work around specific restrictions.
 
 Service limits are determined by a plan that this service uses.
 
-| Plan     | VMs    | CPU per VM         | RAM per VM | Total storage   | Maximum concurrent queries                                                                       |
-| -------- | ------ | ------------------ | ---------- | --------------- | ------------------------------------------------------------------------------------------------ |
-| Hobbyist | 1      | 1 (2 for AWS only) | 4 GB       | 180 GB          | 25 queries per 4 GB of RAM                                                                       |
-| Startup  | 1      | 2                  | 16 GB      | 1150 GB         | 100 queries per 16 GB of RAM                                                                     |
-| Business | 3      | 2 - 8              | 16 - 64 GB | 1150 - 4600 GB  | 100 queries per 16 GB of RAM<br/> 200 queries per 32 GB of RAM<br/> 300 queries per 64 GB of RAM |
-| Premium  | 6 - 30 | 2 - 8              | 16 - 64 GB | 2300 - 46000 GB | 100 queries per 16 GB of RAM<br/> 200 queries per 32 GB of RAM<br/> 300 queries per 64 GB of RAM |
+| Plan     | VMs    | CPU per VM         | RAM per VM | Total storage   | Maximum concurrent queries   |
+| -------- | ------ | ------------------ | ---------- | --------------- | ---------------------------- |
+| Hobbyist | 1      | 1 (2 for AWS only) | 4 GB       | 180 GB          | 25 queries per 4 GB of RAM   |
+| Startup  | 1      | 2                  | 16 GB      | 1150 GB         | 100 queries per 16 GB of RAM |
+| Business | 3      | 2 - 8              | 16 - 64 GB | 1150 - 4600 GB  | 100 queries per 16 GB of RAM |
+| Premium  | 6 - 30 | 2 - 8              | 16 - 64 GB | 2300 - 46000 GB | 100 queries per 16 GB of RAM |
 
 :::tip
 If you need a custom plan with capacity beyond the listed limits,
