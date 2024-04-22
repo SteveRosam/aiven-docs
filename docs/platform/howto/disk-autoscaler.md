@@ -63,18 +63,19 @@ the available disk storage capacity and depends on a service type:
 
 ## Limits and limitations
 
-- The maximum storage capacity that Aiven Autoscaler can allocate for your service is
-  determined by:
-  - Maximum disk capacity set in the Aiven Autoscaler endpoint configuration
-  - Maximum [DDS](/docs/platform/howto/add-storage-space) storage capacity supported by
+- Maximum storage capacity that Aiven Autoscaler can allocate for your service is
+  limited by:
+  - Maximum disk capacity set for the
+    [Aiven Autoscaler endpoint](#change-max-disk-space)
+  - Maximum [DDS](/docs/platform/howto/add-storage-space) storage capacity supported on
     your service plan
 - When triggered, the autoscaling process takes a moment. Meanwhile, the service disk
   might get full, and your service might enter the read-only mode. In such cases, the
   service is back to normal as soon as the autoscaling process completes unless Aiven
-  Autoscaler's limits are exceeded.
-- Aiven Autoscaler works on fully running services only. It doesn't work for a service
-  that is being applied a maintenance update.
-- If you've made a change to disk space recently, the autoscaling might be delayed.
+  Autoscaler's disk capacity limits are exceeded.
+- Disk autoscaling works on fully running services only and cannot happen during
+  maintenance updates.
+- If you change disk space manually, you might delay an autoscaling process.
 
 ## Prerequisites
 
@@ -219,7 +220,7 @@ running the commands to create the following:
 </TabItem>
 </Tabs>
 
-## Configure disk autoscaler
+## Change the maximum disk space for autoscaling{#change-max-disk-space}
 
 After enabling disk autoscaler, you can always update the
 maximum additional disk storage allowed for autoscaling purposes. You
